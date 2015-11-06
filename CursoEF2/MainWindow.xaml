@@ -1,0 +1,13 @@
+﻿<Window x:Class="CursoEF2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewmodel="clr-namespace:CursoEF2"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <viewmodel:MainViewModel x:Key="vm"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource ResourceKey=vm}">
+        <DataGrid ItemsSource="{Binding Funcionarios}" AutoGenerateColumns="True"  HorizontalAlignment="Left" Margin="34,103,0,0" VerticalAlignment="Top" Height="193" Width="452"/>
+
+    </Grid>
+</Window>
